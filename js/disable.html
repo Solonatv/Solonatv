@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Disable Right Click</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<style>
+	body{
+		text-align: center;
+	}
+		h1{
+			font-size: 46px;
+		}
+	</style>
+</head>
+<body>
+
+<h1>Disable right click and other things</h1>
+<p class="code">$t = date("H");<br>
+echo "The hour (of the server) is " . $t; <br>
+echo ", and will give the following message:"<br>
+
+if ($t < "10") { <br>
+    echo "Have a good morning!";<br>
+} elseif ($t < "20") {<br>
+    echo "Have a good day!";<br>
+} else {<br>
+    echo "Have a good night!";<br>
+}<br>
+</p>
+
+<script type="text/javascript">
+	
+$(document).ready(function() {
+	$('body').bind('cut copy paste', function (e) {
+		e.preventDefault();
+	})
+	$(".code").on("contextmenu", function(e) {
+		return false;
+	})
+})
+
+</script>
+
+</body>
+</html>
