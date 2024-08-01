@@ -3,7 +3,14 @@
 }
 
 .wrapper {
-	width: 800px;
+	width: 600px;
 	margin: auto;
-	border-radius: 10px;
+	border-radius: 1px;
+    overflow: auto;
+}
+
+@media screen {(max-width: 600px);
+ .wrapper {
+    width: 90%;
+ }    
 }
